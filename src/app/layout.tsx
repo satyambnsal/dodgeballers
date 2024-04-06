@@ -8,9 +8,9 @@ import { Theme } from "@radix-ui/themes";
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
-  title: "StarkVoice",
+  title: "DodgeBallers",
   description:
-    "Decentralized Voting Platform, designed to empower users by providing a secure and transparent way to participate in decision-making processes",
+    "Blobert NFT Duel",
 };
 
 export default function RootLayout({
