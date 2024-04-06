@@ -1,4 +1,8 @@
 .radix-themes {
-  --default-font-family: var(--font-monteserrat), sans-serif;
-  --heading-font-family: var(--font-fjalla-one), sans-serif;
+  --default-font-family: var(--font-press-start), sans-serif;
+  --heading-font-family: var(--font-press-start), sans-serif;
+  --font-weight-light: 200;
+  --font-weight-regular: 300;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
 }

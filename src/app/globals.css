@@ -1,12 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root, .light, .light-theme {
+:root,
+.light,
+.light-theme {
   --theme-toggle-sun-icon-display: block;
   --theme-toggle-moon-icon-display: none;
 }
-.dark, .dark-theme {
+
+.dark,
+.dark-theme {
   --theme-toggle-sun-icon-display: none;
   --theme-toggle-moon-icon-display: block;
+}
+
+body {
+  font-family: "Press Start 2P", system-ui;
+}
+
+#game .cup {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 130px solid red;
+  height: 0;
+  cursor: pointer;
+  float: left;
+  margin: 0 20px;
+  position: relative;
+  width: 70px;
+}
+
+#game .ball {
+  display: none;
+  background: #000;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 65px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#game-result {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  text-align: center;
 }

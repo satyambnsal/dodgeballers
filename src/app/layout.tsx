@@ -2,7 +2,7 @@ import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import "./theme-config.css";
 import { Providers } from "../contexts/providers";
-import { fjallaOne, monteserrat } from "../styles/fonts";
+import { fjallaOne, monteserrat, pressStart } from "../styles/fonts";
 import { Header } from "@/components/Header";
 import { Theme } from "@radix-ui/themes";
 import { Toaster } from "react-hot-toast";
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${monteserrat.variable}, ${fjallaOne.variable}`}
+      className={`${pressStart.variable}, ${fjallaOne.variable}`}
     >
       <body>
         <Providers>
