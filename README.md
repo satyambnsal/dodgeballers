@@ -85,10 +85,12 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 3. Blobert Website: https://blobert.realms.world/
 4. Blobert Code: https://github.com/BibliothecaDAO/codename-bobby-realms
 5. Blobert Sepolia Address: https://sepolia.voyager.online/contract/0x02F7b0c38511F8AB906Cf4D686DF7b75a21c37379baE1b79403B75Dae602d60f#readContract
+6. Blobert collection Link: https://realms.world/collection/blobert
 
 
 
+Deployed BlobCloneToken address: 0x02c66dd7c9d98d3a4b58583ab729504af5af9dc28172af2297ad1d14fe5ee9a9
 
-BlobToken address: 0x00f92c2abb9c08628f9c35573addb6e808dec5f0efe20f5e60dcc8889c977dca
+
 
 
