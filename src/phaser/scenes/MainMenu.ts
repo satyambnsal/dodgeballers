@@ -9,9 +9,13 @@ export class MainMenu extends Scene {
   bomb?: GameObjects.Image;
   cannonHead?: GameObjects.Image;
   title?: GameObjects.Text;
+  scoreText?: GameObjects.Text;
   logoTween?: Phaser.Tweens.Tween | null;
   fallingBombSound: any;
   explosionSound: any;
+  clickSound: any;
+  score?: number;
+  scoreUpdated: any;
 
   constructor() {
     super("MainMenu");
@@ -19,10 +23,21 @@ export class MainMenu extends Scene {
   create() {
     this.physics.world.gravity.set(0, 0);
 
+    this.isHitted = false;
+    this.scoreUpdated = false;
+
     const { width, height } = this.scale;
     const cannon = this.add.image(130, 464, "cannon_body").setDepth(1);
     this.fallingBombSound = this.sound.add("fallingBomb");
     this.explosionSound = this.sound.add("explosion");
+    this.clickSound = this.sound.add("clickSound");
+    this.score = 0;
+
+    this.scoreText = this.add
+      .bitmapText(10, 10, "atari", "", 30)
+      .setInteractive();
+
+    this.scoreText.setText(`Score: ${this.score}`);
 
     this.cannonHead = this.add
       .image(130, 416, "cannon_head")
@@ -93,6 +108,10 @@ export class MainMenu extends Scene {
         this.bomb.disableBody(true, true);
         this.fallingBombSound.stop();
         this.explosionSound.play();
+        this.isHitted = true;
+        if (!this.scoreUpdated) {
+          this.updateScore();
+        }
       },
       null,
       this
@@ -106,10 +125,38 @@ export class MainMenu extends Scene {
         600,
         this.bomb.body.velocity
       );
+      this.scoreUpdated = false;
+      this.clickSound.play();
       this.fallingBombSound.play();
     });
 
     this.line = new Phaser.Geom.Line();
     // this.scene.start("MainMenu");
+  }
+
+  update() {
+    console.log(this.bomb.y);
+    if (
+      this.bomb.x > 800 ||
+      this.bomb.x < 0 ||
+      this.bomb.y < 0 ||
+      this.bomb.y > 600
+    ) {
+      this.isHitted = false;
+      if (!this.scoreUpdated) {
+        this.updateScore();
+      }
+    }
+  }
+
+  updateScore() {
+    if (this.isHitted) {
+      this.score = this.score + 10;
+      this.scoreText.setText(`Score: ${this.score}`);
+    } else {
+      this.score = this.score - 5;
+      this.scoreText.setText(`Score: ${this.score}`);
+    }
+    this.scoreUpdated = true;
   }
 }

@@ -23,6 +23,12 @@ export class Preloader extends Scene {
     this.load.image("targetImg", "assets/target.png");
     this.load.image("startImg", "assets/startBtn.png");
 
+    this.load.bitmapFont(
+      'atari',
+      "fonts/atari-sunset.png",
+      "fonts/atari-sunset.xml"
+    );
+
     this.load.spritesheet("boom", "assets/explosion.png", {
       frameWidth: 64,
       frameHeight: 64,
@@ -31,6 +37,7 @@ export class Preloader extends Scene {
 
     this.load.audio("fallingBomb", "./sounds/fallingBomb.mp3");
     this.load.audio("explosion", "./sounds/explosion.mp3");
+    this.load.audio("clickSound", "./sounds/click.mp3");
   }
 
   create() {
