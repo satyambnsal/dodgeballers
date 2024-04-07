@@ -2,14 +2,9 @@
 version = 1
 
 [[package]]
-name = "alexandria_storage"
+name = "my_account"
 version = "0.1.0"
-
-[[package]]
-name = "dodgeballers_contract"
-version = "0.2.0"
 dependencies = [
- "alexandria_storage",
  "openzeppelin",
  "snforge_std",
 ]

@@ -1,6 +1,6 @@
 #[starknet::contract]
-mod MockERC20 {
-    use openzeppelin::token::erc20::{ERC20Component, interface::{IERC20, IERC20Metadata}};
+mod DogdeBallNFT {
+        use openzeppelin::token::erc20::ERC20Component;
     use starknet::{ContractAddress, get_caller_address};
 
     component!(path: ERC20Component, storage: erc20, event: ERC20Event);
@@ -25,8 +25,11 @@ mod MockERC20 {
     }
 
     #[constructor]
-    fn constructor(ref self: ContractState) {
-        ERC20InternalImpl::initializer(ref self.erc20, 'MockERC20', 'M-ERC20');
-        ERC20InternalImpl::_mint(ref self.erc20, get_caller_address(), 1_000_000_000);
+    fn constructor(ref self: ContractState, recipient: ContractAddress) {
+        let name = "BlobToken";
+        let symbol = "BLT";
+
+        self.erc20.initializer(name, symbol);
+        self.erc20._mint(recipient, 1_000_000_000);
     }
 }

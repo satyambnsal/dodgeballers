@@ -1,2 +1,1 @@
-mod BlobToken;
-mod starkvoice;
+mod BlobCloneNFT;
