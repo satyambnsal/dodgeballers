@@ -1,48 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Game as PhaserGame } from "phaser";
 import { LoadScene, MainScene, MenuScene } from "./scenes";
-import clsx from "clsx";
-import { EVENTS } from "./constants";
 
-export const PhaserLayer = () => {
-  const [game, setGame] = useState<Phaser.Game | null>();
+const config: Phaser.Types.Core.GameConfig = {
+  type: Phaser.AUTO,
+  scene: [LoadScene, MenuScene, MainScene],
+  backgroundColor: "0xded6b6",
+  scale: {
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    mode: Phaser.Scale.FIT,
+  },
+};
+
+export default function PhaserLayer() {
+  const parentEl = useRef<HTMLDivElement>(null);
+
+  const [_, setGame] = useState<PhaserGame | null>(null);
 
   useEffect(() => {
-    const config: Phaser.Types.Core.GameConfig = {
+    if (!parentEl.current) return;
+    const newGame = new PhaserGame({
+      ...config,
+      parent: parentEl.current,
       width: 1280,
-      height: "100%",
-      parent: "dodgeball",
-      type: Phaser.AUTO,
-      scene: [LoadScene, MenuScene, MainScene],
-      backgroundColor: "0xded6b6",
-      scale: {
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        mode: Phaser.Scale.FIT,
-      },
-    };
-
-    const game = new Phaser.Game(config);
-
-    game.events.on(EVENTS.NETWORK_CONNECTION_FAILED, () => {
-      alert(
-        "Wallet generation is in progress. Usually it takes 5-8 seconds on first reload. Try Again once!"
-      );
-      // if (networkLayer) {
-      //     game.registry.set(NETWORK_LAYER_KEY, networkLayer);
-      // }
+      height: "90%",
     });
-    setGame(game);
+
+    setGame(newGame);
+
     return () => {
-      game.destroy(true);
+      newGame?.destroy(true, true);
+      console.log("🐲 DESTROY 🐲");
     };
   }, []);
 
-  // useEffect(() => {
-  //     if (networkLayer) {
-  //         game?.registry.set(NETWORK_LAYER_KEY, networkLayer);
-  //     }
-  // }, [networkLayer, game]);
-
-  return <div id="dodgeball" className={clsx("bg-red")} />;
-};
+  return <div ref={parentEl} className="mt-64 block h-1/2 w-screen" />;
+}

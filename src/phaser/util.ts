@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/unbound-method */
 // from lodash
 export function copyArray(source: any[], array?: any[]) {
   let index = -1;

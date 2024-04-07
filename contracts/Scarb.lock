@@ -6,7 +6,7 @@ name = "alexandria_storage"
 version = "0.1.0"
 
 [[package]]
-name = "cairo_contracts"
+name = "dodgeballers_contract"
 version = "0.2.0"
 dependencies = [
  "alexandria_storage",
