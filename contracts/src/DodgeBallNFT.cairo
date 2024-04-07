@@ -66,7 +66,7 @@ mod DodgeBallNFT {
     ) {
         let name = "DodgeBall";
         let symbol = "DODGEBALL";
-        let base_uri = "https://api.example.com/v1/";
+        let base_uri = "https://create-starknet-app.xyz/api?id=";
         let token_id = 1;
 
         self.erc721.initializer(name, symbol, base_uri);
