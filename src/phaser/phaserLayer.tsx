@@ -24,7 +24,7 @@ export default function PhaserLayer() {
     const newGame = new PhaserGame({
       ...config,
       parent: parentEl.current,
-      width: 1280,
+      width: 1000,
       height: "90%",
     });
 
