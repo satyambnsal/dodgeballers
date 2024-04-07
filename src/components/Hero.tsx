@@ -122,7 +122,7 @@ export function Hero() {
         </Text>
 
         {!address && (
-          <Text className="text-red-900">
+          <Text className="pt-8 text-red-900">
             {" "}
             Please connect your wallet first to check mint eligibility
           </Text>

@@ -1,4 +1,4 @@
-import { Scene, Phaser } from "phaser";
+import { Scene } from "phaser";
 
 export class PlayScreen extends Scene {
   clickSound: any;
@@ -7,9 +7,7 @@ export class PlayScreen extends Scene {
     super("PlayScreen");
   }
 
-  preload() {
-    console.log("hi");
-  }
+  preload() {}
 
   create() {
     this.clickSound = this.sound.add("clickSound");

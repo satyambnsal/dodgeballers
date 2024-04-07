@@ -21,7 +21,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${pressStart.variable}, ${fjallaOne.variable}`}
+      className={`${monteserrat.variable}, ${fjallaOne.variable}`}
     >
       <body>
         <Providers>

@@ -1,7 +1,5 @@
 import { GameObjects, Scene } from "phaser";
 
-import { EventBus } from "../EventBus";
-
 export class MainMenu extends Scene {
   background?: GameObjects.Image;
   logo?: GameObjects.Image;
@@ -16,6 +14,7 @@ export class MainMenu extends Scene {
   clickSound: any;
   score?: number;
   scoreUpdated: any;
+  isHitted?: any;
 
   constructor() {
     super("MainMenu");
