@@ -8,12 +8,12 @@ export class LoadScene extends Phaser.Scene {
   input: any;
 
   preload() {
-    // this.load.image("player", "assets/house.png");
+    this.load.image("player", "assets/house.png");
   }
 
   create() {
-    // this.player = this.add.image(400, 300, "player");
-    // this.player.setOrigin(0.5, 0.5);
+    this.player = this.add.image(400, 300, "player");
+    this.player.setOrigin(0.5, 0.5);
   }
 
   update() {
