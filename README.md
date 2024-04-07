@@ -89,7 +89,18 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 
 
-Deployed BlobCloneToken address: 0x02c66dd7c9d98d3a4b58583ab729504af5af9dc28172af2297ad1d14fe5ee9a9
+
+### Sepolia Contract Addresses 
+BlobCloneNFT: 0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c
+
+https://sepolia.starkscan.co/contract/0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c#overview
+
+
+
+
+
+### Mainnet Contract Addresses
+
 
 
 

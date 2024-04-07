@@ -1,1 +1,0 @@
-[Dynamic NFT with Carbon](https://starkware.co/resource/dynamic-nfts-and-their-potential/)

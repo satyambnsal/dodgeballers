@@ -7,6 +7,31 @@ Smart contracts written in cairo1.0
 
 
 
+
+Sepolia RPC
+https://starknet-sepolia.public.blastapi.io
+https://starknet-sepolia.public.blastapi.io/rpc/v0_7
+
+
+braavos 7dc account: 
+classhash: 0x00816dd0297efc55dc1e7559020a3a825e81ef734b558f03c83325d4da7e6253
+address: 0x041b27f006d01a9d2c468e33a05f1951b6a7cd0ac562b928a8e0728d4e5627dc
+
+
+
+
+Katana Account:
+http://0.0.0.0:5050
+
+| Account address |  0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
+| Private key     |  0x2bbf4f9fd0bbb2e60b0316c1fe0b76cf7a4d0198bd493ced9b8df2a3a24d68a
+| Public key      |  0x640466ebd2ce505209d3e5c4494b4276ed8f1cde764d757eb48831961f7cdea
+
+
+
+
+
+
 ### Important Commands
 
 Install rust
@@ -175,30 +200,6 @@ starkli call 0x03d568de0f4e151ed97a196e7585cae03be68b8d01c3d5af2e19c7aa4bb07202 
 - field elements are integers in the range between `0 <= x < P`, where P is a very large prime number, currently `P = 2^{251} + 17 * 2^{192} + 1`
 
 
-# Known-Issues
-
-1. **Unknown Classhash error**: 
-If you get an unknown classhash error while creating account descriptor for your braavos account, you can create a account file manually.
-create a file `~/.starkli-wallets/deployer/my_testnet_account1.json` with following content
-```
-{
-  "version": 1,
-  "variant": {
-        "type": "open_zeppelin",
-        "version": 1,
-        "public_key": "<PUBLIC_KEY>"
-  },
-    "deployment": {
-        "status": "deployed",
-        "class_hash": "<CLASS_HASH>",
-        "address": "<WALLET_ADDRESS>"
-  }
-}
-```
-
-- Get **<PUBLIC_KEY>**, from **Privacy and Security** section in **Braavos**
-- To get classhash, open `https://testnet.starkscan.co/contract/<WALLET_ADDRESS>` link in browser. you should be able to see classhash for your account.
-
 
 # Starknet foundry commands
 
@@ -219,19 +220,3 @@ sncast --profile testnet1 deploy --class-hash <class-hash> --constructor-calldat
 # Other Useful commands
 
 1. Run `scarb --offline build` to build a project without updating dependencies.
-
-
-## Important Links
-- [Braavos google play store link](https://chrome.google.com/webstore/detail/braavos-smart-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma)
-- [Starknet Goerli network faucet](https://faucet.goerli.starknet.io)
-- [Starscan](https://testnet.starkscan.co/)
-- [Voyager](https://goerli.voyager.online/?lang=en-US&theme=light)
-- [Starknet Documentation](https://docs.starknet.io/documentation/)
-- [Starknet Book](https://book.starknet.io/)
-- [Cairo Book](https://cairo-book.github.io/)
-- [Starknet Foundry book](https://foundry-rs.github.io/)
-- [Starknet Ecosystem](https://www.starknet-ecosystem.com/)
-- [Run Starknet Locally with Katana](https://book.dojoengine.org/toolchain/katana/overview.html)
-- [Starknet By Example Voyager book](https://starknet-by-example.voyager.online/)
-- [Starknet Converter Utility](https://www.stark-utils.xyz/converter)
-- [Starknet docs](https://docs.starknet.io/)
