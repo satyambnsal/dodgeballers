@@ -1,4 +1,4 @@
-import { Scene, Phaser } from "phaser";
+import { Scene } from "phaser";
 
 export class Preloader extends Scene {
   constructor() {

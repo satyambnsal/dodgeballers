@@ -6,7 +6,7 @@ const path = require('path')
 const BASE_PATH = path.resolve(__dirname, '../contracts/target/dev')
 const OUTPUT_FILE_PATH = path.resolve(__dirname, '../src/abis');
 
-const artifactFilePath = path.resolve(BASE_PATH, "cairo_contracts.starknet_artifacts.json");
+const artifactFilePath = path.resolve(BASE_PATH, "dodgeball.starknet_artifacts.json");
 
 try {
   let artifactContent = fs.readFileSync(artifactFilePath)

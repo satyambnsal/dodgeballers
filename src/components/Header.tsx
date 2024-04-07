@@ -5,9 +5,10 @@ import { ConnectButton } from "./buttons/ConnectButton";
 import { useNetwork } from "@starknet-react/core";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-const GITHUB_CONTRACTS_URL = "https://github.com/satyambnsal/dodgeballers";
+const GITHUB_CONTRACTS_URL =
+  "https://github.com/satyambnsal/dodgeballers/tree/main/contracts";
 
-const FEEDBACK_FORM_URL = "https://forms.gle/7FBvga7qCtP6iCKr8";
+// const FEEDBACK_FORM_URL = "https://forms.gle/7FBvga7qCtP6iCKr8";
 
 export const Header = () => {
   const { chain } = useNetwork();
@@ -24,9 +25,9 @@ export const Header = () => {
         <Link href={GITHUB_CONTRACTS_URL} target="_blank" className="py-4">
           <GitHubLogoIcon />
         </Link>
-        <Link href={FEEDBACK_FORM_URL} target="_blank" className="py-4">
+        {/* <Link href={FEEDBACK_FORM_URL} target="_blank" className="py-4">
           Feedback
-        </Link>
+        </Link> */}
       </Box>
       <Box
         height="0"

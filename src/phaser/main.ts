@@ -1,6 +1,4 @@
 import { Boot } from "./scenes/Boot";
-import { GameOver } from "./scenes/GameOver";
-import { Game as MainGame } from "./scenes/Game";
 import { MainMenu } from "./scenes/MainMenu";
 import { AUTO, Game } from "phaser";
 import { Preloader } from "./scenes/Preloader";
@@ -18,10 +16,10 @@ const config: Phaser.Types.Core.GameConfig = {
     default: "arcade",
     arcade: {
       debug: true,
-      gravity: { y: 600 },
+      gravity: { x: 0, y: 600 },
     },
   },
-  scene: [Boot, Preloader, PlayScreen, MainMenu, MainGame, GameOver],
+  scene: [Boot, Preloader, PlayScreen, MainMenu],
 };
 
 const StartGame = (parent: string) => {

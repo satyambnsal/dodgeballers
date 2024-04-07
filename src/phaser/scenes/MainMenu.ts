@@ -1,21 +1,23 @@
 import { GameObjects, Scene } from "phaser";
 
-import { EventBus } from "../EventBus";
-
 export class MainMenu extends Scene {
   background?: GameObjects.Image;
   logo?: GameObjects.Image;
   targetImg?: GameObjects.Image;
-  bomb?: GameObjects.Image;
-  cannonHead?: GameObjects.Image;
+  bomb?: any;
+  cannonHead!: GameObjects.Image;
   title?: GameObjects.Text;
-  scoreText?: GameObjects.Text;
+  scoreText?: any;
   logoTween?: Phaser.Tweens.Tween | null;
   fallingBombSound: any;
   explosionSound: any;
   clickSound: any;
-  score?: number;
+  score!: number;
   scoreUpdated: any;
+  isHitted?: any;
+  graphics?: any;
+  angle!: number;
+  line!: Phaser.Geom.Line;
 
   constructor() {
     super("MainMenu");
@@ -84,18 +86,26 @@ export class MainMenu extends Scene {
 
     // Drag event handling for cannon head
     this.input.setDraggable(this.cannonHead);
-    this.input.on("drag", (pointer, gameObject, dragX, dragY) => {
-      this.angle = Phaser.Math.Angle.BetweenPoints(cannon, pointer);
-      this.cannonHead.rotation = this.angle;
-      Phaser.Geom.Line.SetToAngle(
-        this.line,
-        cannon.x,
-        cannon.y - 50,
-        this.angle,
-        128
-      );
-      this.graphics.clear().strokeLineShape(this.line);
-    });
+    this.input.on(
+      "drag",
+      (
+        pointer: Phaser.Types.Math.Vector2Like,
+        gameObject: any,
+        dragX: any,
+        dragY: any
+      ) => {
+        this.angle = Phaser.Math.Angle.BetweenPoints(cannon, pointer);
+        this.cannonHead.rotation = this.angle;
+        Phaser.Geom.Line.SetToAngle(
+          this.line,
+          cannon.x,
+          cannon.y - 50,
+          this.angle,
+          128
+        );
+        this.graphics.clear().strokeLineShape(this.line);
+      }
+    );
 
     this.physics.add.collider(
       this.targetImg,
@@ -113,7 +123,7 @@ export class MainMenu extends Scene {
           this.updateScore();
         }
       },
-      null,
+      undefined,
       this
     );
 
