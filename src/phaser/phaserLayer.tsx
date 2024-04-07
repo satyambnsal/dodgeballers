@@ -6,6 +6,13 @@ import { LoadScene, MainScene, MenuScene } from "./scenes";
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
+  physics: {
+    default: "arcade",
+    arcade: {
+      debug: true,
+      gravity: { y: 600 }
+    }
+  },
   scene: [LoadScene, MenuScene, MainScene],
   backgroundColor: "0xded6b6",
   scale: {
