@@ -1,6 +1,8 @@
 import { Scene, Phaser } from "phaser";
 
 export class PlayScreen extends Scene {
+  clickSound: any;
+
   constructor() {
     super("PlayScreen");
   }
@@ -10,6 +12,7 @@ export class PlayScreen extends Scene {
   }
 
   create() {
+    this.clickSound = this.sound.add("clickSound");
     const { width, height } = this.scale;
     const startBtn = this.add
       .image(width / 2, height / 2, "startImg")
@@ -17,6 +20,7 @@ export class PlayScreen extends Scene {
       .setInteractive({ useHandCursor: true });
 
     startBtn.on("pointerdown", () => {
+      this.clickSound.play();
       this.scene.start("MainMenu");
     });
   }
