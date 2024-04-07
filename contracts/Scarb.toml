@@ -1,36 +1,18 @@
 [package]
-name = "dodgeballers_contract"
-version = "0.2.0"
-authors = ["Satyam Bansal <satyamsgsits1994@gmail.com>"]
-description = "Dodgeballers starknet smart contracts"
-readme = "README.md"
-repository = "https://github.com/satyambnsal/dodgeballers/contracts"
-license = "MIT"
-keywords = ["Cairo", "Starknet", "Layer2"]
-cairo = "2.6.4"
+name = "my_account"
+version = "0.1.0"
+edition = "2023_11"
+cairo = "2.5.4"
+# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
 
 [dependencies]
-starknet = "2.6.3"
+starknet = "2.5.4"
 openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.11.0" }
+
+[dev-dependencies]
 snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry", tag = "v0.21.0" }
-alexandria_storage = { path = "./crates/alexandria_storage" }
 
-# comment following line if executing non-starknet cairo programs
+
 [[target.starknet-contract]]
-sierra = true
 casm = true
-
-
-[tool.snforge]
-exit_first = true
-
-[tool.sncast.localaccount6]
-account = "localaccount6"
-accounts-file = "/Users/satyam/.starknet_accounts/starknet_open_zeppelin_accounts.json"
-url = "http://127.0.0.1:5050/"
-
-
-[tool.sncast.testnet1]
-account = "testnet1"
-accounts-file = "/Users/satyam/.starknet_accounts/starknet_open_zeppelin_accounts.json"
-url = "https://starknet-goerli.g.alchemy.com/v2/u9atiwbDU8wsZfikEV9AzPMBKL8adzJM"
+sierra = true
