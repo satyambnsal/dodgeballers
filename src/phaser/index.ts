@@ -1,6 +1,4 @@
 // import { createPhaserEngine } from "@latticexyz/phaserx";
-import { NetworkLayer } from "../dojo/createNetworkLayer";
-import { namespaceWorld } from "@dojoengine/recs";
 // import { TILE_HEIGHT, TILE_WIDTH } from "./config/constants";
 import Phaser from "phaser";
 // import { Scenes } from "./constants";
@@ -8,7 +6,6 @@ import Phaser from "phaser";
 export type PhaserLayer = Awaited<ReturnType<typeof createPhaserLayer>>;
 
 export const createPhaserLayer = async (
-    networkLayer: NetworkLayer,
     phaserConfig: Phaser.Types.Core.GameConfig
 ) => {
     const world = namespaceWorld(networkLayer.world, "phaser");
