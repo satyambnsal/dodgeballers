@@ -91,12 +91,29 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 
 ### Sepolia Contract Addresses 
+
+Blobert code
 BlobCloneNFT: 0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c
 
 https://sepolia.starkscan.co/contract/0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c#overview
 
 
+Custom Blobert clone 
+0x770006531ee20284e2d0eee309f7aad3d9a3a538d125da1aeb0df3956ebda65
 
+
+
+
+
+### Katana local
+
+account address: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
+
+
+Blobert clone NFT address: 0x34f71e5b6537cf2292d7ccdd49a252fc65e5578ff4d6839916393954145cfbf
+
+Dodgeball contract address
+0x505d9f79ea6c2c00e07f3e9dbf7f10c92668f46b95c22d88a39f9a271aad6f1
 
 
 ### Mainnet Contract Addresses

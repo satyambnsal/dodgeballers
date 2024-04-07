@@ -2,7 +2,7 @@
 [sncast.sat_7dc]
 account = "sat_7dc"
 accounts-file = "/Users/satyam/.starknet_accounts/starknet_open_zeppelin_accounts.json"
-url = "https://starknet-sepolia.public.blastapi.io/rpc/v0_7"
+url = "https://starknet-sepolia.public.blastapi.io/rpc/v0_6"
 
 [sncast.katana_1]
 account = "katana_1"
