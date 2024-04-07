@@ -5,7 +5,7 @@ import { Container } from "@radix-ui/themes";
 
 export default function Dashboard() {
   return (
-    <Container>
+    <Container className="mt-20">
       <PhaserLayer />
     </Container>
   );

@@ -14,6 +14,13 @@ export const PhaserLayer = () => {
       height: "100%",
       parent: "dodgeball",
       type: Phaser.AUTO,
+      physics: {
+        default: "arcade",
+        arcade: {
+          debug: true,
+          gravity: { y: 600 }
+        }
+      },
       scene: [LoadScene, MenuScene, MainScene],
       backgroundColor: "0xded6b6",
       scale: {
