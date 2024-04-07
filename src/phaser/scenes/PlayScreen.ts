@@ -18,6 +18,23 @@ export class PlayScreen extends Scene {
       .setInteractive({ useHandCursor: true });
 
     startBtn.on("pointerdown", () => {
+      const handleMintAlertModal = this.game.registry.get(
+        "handleMintAlertModal"
+      );
+
+      const handleTutorialModal = this.game.registry.get("handleTutorialModal");
+      const showMintAlert = this.game.registry.get("showMintAlert");
+      const isShowTutorial = window.sessionStorage.getItem("is_show_tutorial");
+      if (showMintAlert) {
+        handleMintAlertModal();
+        return;
+      }
+      if (isShowTutorial !== "false") {
+        handleTutorialModal();
+      }
+      // if (!checkEntryFeesPaid) {
+      //   return handleEntryFees();
+      // }
       this.clickSound.play();
       this.scene.start("MainMenu");
     });
