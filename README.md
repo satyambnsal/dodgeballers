@@ -101,7 +101,8 @@ https://sepolia.starkscan.co/contract/0x0522d9ca1006be983f9106b8a78be9f25f1f4937
 Custom Blobert clone 
 0x770006531ee20284e2d0eee309f7aad3d9a3a538d125da1aeb0df3956ebda65
 
-
+Dodgeball contract address:
+0x673a3af516fceb278a6d472a435cdb3195ae5a037ca3c717598a3b57359b7b5
 
 
 

@@ -10,20 +10,16 @@ import {
   useInjectedConnectors,
   voyager,
 } from "@starknet-react/core";
-// // const provider = alchemyProvider({});
-
-import { RpcProvider } from "starknet";
-// console.log("public provider", publicProvider());
 
 function rpc(chain: Chain) {
   return {
-    nodeUrl: `https://starknet-${chain.network}.public.blastapi.io/rpc/v0_7`,
+    nodeUrl:
+      process.env.NEXT_PUBLIC_RPC_PROVIDER ||
+      `https://starknet-${chain.network}.public.blastapi.io/rpc/v0_7`,
   };
 }
-
 const provider = jsonRpcProvider({ rpc });
 
-console.log("provider", provider);
 
 export const StarknetProvider = ({
   children,

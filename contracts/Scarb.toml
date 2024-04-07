@@ -1,5 +1,5 @@
 [package]
-name = "my_account"
+name = "dodgeball"
 version = "0.1.0"
 edition = "2023_11"
 cairo = "2.5.4"
