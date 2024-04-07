@@ -11,7 +11,7 @@ const PhaserLayerntWithNoSSR = dynamic(() => import("@/phaser/PhaserGame"), {
 export default function Dashboard() {
   const phaserRef = useRef<IRefPhaserGame | null>(null);
   return (
-    <Container className="h-screen w-screen pb-24">
+    <Container className="h-screen pb-24 mt-20">
       <PhaserLayerntWithNoSSR ref={phaserRef}/>
     </Container>
   );
