@@ -11,12 +11,11 @@ const PhaserLayerntWithNoSSR = dynamic(() => import("@/phaser/PhaserGame"), {
   ssr: false,
 });
 export default function Dashboard() {
-  const phaserRef = useRef<IRefPhaserGame | null>(null);
   const [isMintAlertModalOpen, setIsMintAlertModalOpen] = useState(false);
   const [isGameTutorialOpen, setIsGameTutorialOpen] = useState(false);
   return (
     <Container className="mt-20 h-screen pb-24">
-      <PhaserLayerntWithNoSSR ref={phaserRef} />
+      <PhaserLayerntWithNoSSR />
       <MintDodgeBallNFTModal
         open={isMintAlertModalOpen}
         handleClose={() => {
