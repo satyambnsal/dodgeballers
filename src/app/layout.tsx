@@ -6,6 +6,7 @@ import { fjallaOne, monteserrat, pressStart } from "../styles/fonts";
 import { Header } from "@/components/Header";
 import { Theme } from "@radix-ui/themes";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "DodgeBallers",
@@ -39,6 +40,7 @@ export default function RootLayout({
             </div>
           </Theme>
         </Providers>
+        <Footer />
       </body>
     </html>
   );

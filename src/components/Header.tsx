@@ -3,9 +3,9 @@ import { Box, Badge, Container, Link, Heading, Text } from "@radix-ui/themes";
 import { ThemeToggle } from "./common/ThemeToggle";
 import { ConnectButton } from "./buttons/ConnectButton";
 import { useAccount, useBalance, useNetwork } from "@starknet-react/core";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, VideoIcon } from "@radix-ui/react-icons";
 import { CONTRACT_CONFIG } from "@/contract-config";
-import { GITHUB_CONTRACTS_URL } from "@/utils/constants";
+import { GAME_DEMO_VIDEO, GITHUB_CONTRACTS_URL } from "@/utils/constants";
 
 // const FEEDBACK_FORM_URL = "https://forms.gle/7FBvga7qCtP6iCKr8";
 
@@ -35,6 +35,9 @@ export const Header = () => {
         </Link>
         <Link href={GITHUB_CONTRACTS_URL} target="_blank" className="py-4">
           <GitHubLogoIcon />
+        </Link>
+        <Link href={GAME_DEMO_VIDEO} target="_blank" className="py-4">
+          Demo <VideoIcon />
         </Link>
         {/* <Link href={FEEDBACK_FORM_URL} target="_blank" className="py-4">
           Feedback
