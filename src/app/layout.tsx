@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "DodgeBallers",
-  description: "Blobert NFT Duel",
+  description: "DodgeBaller is a game built for Blobert NFT holders",
 };
 
 export default function RootLayout({
