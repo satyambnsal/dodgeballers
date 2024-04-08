@@ -2,15 +2,19 @@ export const CONTRACT_CONFIG = {
   mainnet: {
     blobertnft: {
       address:
-        "0x770006531ee20284e2d0eee309f7aad3d9a3a538d125da1aeb0df3956ebda65",
+        "0x00539f522b29ae9251dbf7443c7a950cf260372e69efab3710a11bf17a9599f1",
     },
     dodgeballnft: {
       address:
-        "0x673a3af516fceb278a6d472a435cdb3195ae5a037ca3c717598a3b57359b7b5",
+        "0x560f904420e1f59632973419fa7d142566939d9b4e356185b879285ee4e08a8",
     },
     dodgecoin: {
       address:
-        "0x00f92c2abb9c08628f9c35573addb6e808dec5f0efe20f5e60dcc8889c977dca",
+        "0x5c9342f38f16c5f4e89eaa90d83cf5e1868fb39637fe6a909151a546fd93507",
+    },
+    dodgecoach: {
+      address:
+        "0x462c71405d9a7e2da85f1d7d649ffe6d006328d9d2a70b644204f829b551cec",
     },
   },
   sepolia: {
