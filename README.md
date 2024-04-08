@@ -108,14 +108,27 @@ Dodgeball contract address:
 
 ### Katana local
 
-account address: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
-
+account address: 
+Address1: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
+Address2: 0xe29882a1fcba1e7e10cad46212257fea5c752a4f9b1b1ec683c503a2cf5c8a
 
 Blobert clone NFT address: 0x34f71e5b6537cf2292d7ccdd49a252fc65e5578ff4d6839916393954145cfbf
 
 Dodgeball contract address
 0x505d9f79ea6c2c00e07f3e9dbf7f10c92668f46b95c22d88a39f9a271aad6f1
 
+
+
+v2
+======
+BlobertClone
+0x34f71e5b6537cf2292d7ccdd49a252fc65e5578ff4d6839916393954145cfbf
+Dodgeball
+0x773c0c65306c4f6610397cd2b13634b097f52f5418d4eaedce1cd0b43f6aaaa
+Dodgecoin
+0x184f81aeab049bcb7113ae1a33c8e141a718bf7150e97a19f95e7a7bdc37bb2
+DodgeCoach
+0x326eb7d666719b3f2ace53c507f2d7cc567aeb9f0703aa38ccf28bcb8ae9c1a
 
 ### Mainnet Contract Addresses
 
