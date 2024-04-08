@@ -119,6 +119,9 @@ export class MainMenu extends Scene {
         this.fallingBombSound.stop();
         this.explosionSound.play();
         this.isHitted = true;
+        setTimeout(() => {
+          this.targetImg!.y = Phaser.Math.Between(100, 500);
+        }, 2000);
         if (!this.scoreUpdated) {
           this.updateScore();
         }
