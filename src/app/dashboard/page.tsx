@@ -36,6 +36,8 @@ export default function Dashboard() {
     watch: true,
   });
 
+  console.log("user dodgeball nft balance", dodgeballData);
+
   return (
     <Container className="mt-20 h-screen pb-24">
       <PhaserLayerntWithNoSSR
@@ -45,7 +47,7 @@ export default function Dashboard() {
         handleTutorialModal={() => {
           setIsGameTutorialOpen(true);
         }}
-        showMintAlert={dodgeballData !== BigInt(1)}
+        showMintAlert={!dodgeballData || dodgeballData === BigInt(0)}
       />
       <MintDodgeBallNFTModal
         open={isMintAlertModalOpen}

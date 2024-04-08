@@ -29,9 +29,7 @@ export class PlayScreen extends Scene {
         handleMintAlertModal();
         return;
       }
-      if (isShowTutorial !== "false") {
-        handleTutorialModal();
-      }
+      handleTutorialModal();
       // if (!checkEntryFeesPaid) {
       //   return handleEntryFees();
       // }

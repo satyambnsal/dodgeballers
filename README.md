@@ -1,7 +1,15 @@
 <div align="center">
-# DodgeBallers: **thrilling duels to find a hidden ball behind a cup**
+DodgeBaller is a game built for Blobert NFT holders. It combines your Blobert's unique traits with a classic dodgeball challenge. Here's the gist:
 
-Dodgeballers is a blockchain-based game where players, armed with their unique Blobert NFTs, engage in thrilling duels to find a hidden ball behind a cup. Each player receives five chances per round, and the one who wins the most rounds emerges victorious. The game features various modes, challenges, and power-ups to keep players engaged. Traits of the Blobert NFTs, including armor, background, jewelry, mask, and weapon, are gamified to enhance gameplay and strategy. Rewards such as rare items and special NFTs are offered for winning duels, while consequences such as temporary penalties are incurred for losing.
+**Mint a Dodgeball NFT**: Your Blobert's features like armor, weapon, and material transform into a one-of-a-kind Dodgeball NFT for the game.
+
+**Earn Dodgecoin**: Minting a Dodgeball NFT also rewards you with some sweet Dogecoin!
+
+**Sharpen Your Aim**: Launch cannonballs at a target, aiming for a bullseye. Each bullseye earns you a hefty amount of Dodgecoin.
+
+**Dodge Financial Ruin**: Every throw costs you a small amount of Dodgecoin. Can you hit the target and become a wealthy Blobert?
+
+It's a fun way to test your skills, win cryptocurrency, and celebrate the unique qualities of your Blobert NFT.
 
 
 

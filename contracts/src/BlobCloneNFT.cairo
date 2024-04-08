@@ -31,7 +31,7 @@ mod BlobCloneNFT {
     #[abi(embed_v0)]
     impl ERC721MetadataCamelOnly =
         ERC721Component::ERC721MetadataCamelOnlyImpl<ContractState>;
-    
+
     impl ERC721InternalImpl = ERC721Component::InternalImpl<ContractState>;
 
     // SRC5
@@ -82,8 +82,8 @@ mod BlobCloneNFT {
     #[abi(embed_v0)]
     impl IBlobertCloneImpl of super::IBlobCloneNFT<ContractState> {
         fn mint(ref self: ContractState, recipient: ContractAddress) -> u256 {
-            assert(get_caller_address() == self.owner.read(), Errors::ONLY_OWNER);
             let token_id = self.total_count.read() + 1;
+            self.total_count.write(token_id);
             self.erc721._mint(recipient, token_id.into());
             token_id.into()
         }
