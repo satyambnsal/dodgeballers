@@ -109,6 +109,7 @@ mod DodgeBallNFT {
 
             // assert(get_caller_address() == self.owner.read(), Errors::ONLY_OWNER);
             let token_id = self.total_count.read() + 1;
+            self.total_count.write(token_id);
             self.erc721._mint(recipient, token_id.into());
             let dodgecoin = IDodgeCoinDispatcher {
                 contract_address: self.dodgecoin_address.read()

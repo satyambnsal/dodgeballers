@@ -47,12 +47,7 @@ mod DodgeCoin {
     }
 
     #[constructor]
-    fn constructor(
-        ref self: ContractState,
-        owner: ContractAddress,
-        dodgeball: ContractAddress,
-        dodgecoach: ContractAddress,
-    ) {
+    fn constructor(ref self: ContractState, owner: ContractAddress, dodgeball: ContractAddress,) {
         // Call the internal function that writes decimals to storage
         self._set_decimals(1);
 
@@ -62,7 +57,6 @@ mod DodgeCoin {
         self.erc20._mint(owner, 1000_000_00);
         self.owner.write(owner);
         self.dodgeball.write(dodgeball);
-        self.dodgecoach.write(dodgecoach);
     }
     #[abi(embed_v0)]
     impl IDodgeCoinImpl of super::IDodgeCoin<ContractState> {

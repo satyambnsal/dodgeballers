@@ -91,6 +91,9 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 
 ### Sepolia Contract Addresses 
+Account:
+Address1: 0x041b27f006d01a9d2c468e33a05f1951b6a7cd0ac562b928a8e0728d4e5627dc
+
 
 Blobert code
 BlobCloneNFT: 0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c
@@ -104,6 +107,17 @@ Custom Blobert clone
 Dodgeball contract address:
 0x673a3af516fceb278a6d472a435cdb3195ae5a037ca3c717598a3b57359b7b5
 
+
+V2
+===========================
+Blobert
+0x770006531ee20284e2d0eee309f7aad3d9a3a538d125da1aeb0df3956ebda65
+DodgeballNFT
+0x79924d57be944e41d642f01934bc5ccd3e53238e95cb7ec9fe2e4e03f82db66
+Dodgecoin
+0x47a9a96c7816c0c093ae1214a6ded2bb7bfcd117d991caf0b9744fb567bba0
+DodgeCoach
+0x462c71405d9a7e2da85f1d7d649ffe6d006328d9d2a70b644204f829b551cec
 
 
 ### Katana local
