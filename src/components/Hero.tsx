@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 // import Image from "next/image";
 
@@ -19,6 +20,7 @@ import { CONTRACT_CONFIG } from "@/contract-config";
 import { useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { Spinner } from "./common/Spinner";
+import { BLOBERT_SITE_URL } from "@/utils/constants";
 
 export function Hero() {
   const router = useRouter();
@@ -61,6 +63,9 @@ export function Hero() {
     address: dodgeballContractAddress,
     watch: true,
   });
+
+  console.log("blobert nft balance", blobertData);
+  console.log("dodgeball nft balance", dodgeballData);
 
   const { contract: dodgeballContract } = useContract({
     abi: DodgeBallNFTABI,
@@ -109,16 +114,18 @@ export function Hero() {
         align="center"
       >
         <div className="font-display text-5xl font-bold sm:text-7xl">
-          <Heading className="block text-center">Dodgeballers</Heading>
-          <Heading className="block text-center text-3xl">
-            {" "}
-            Blobert NFT based Duel
+          <Heading className="block text-center leading-10">
+            Bloberts, Unleash Your Inner Dodgeball Champion!
           </Heading>
         </div>
-        <Text className="font-display space-y-6 text-xl tracking-wide" mt="8">
-          Dodgeballers is a blockchain-based game where players, armed with
-          their unique Blobert NFTs, Bloberts mint their brand new Dodgeball NFT
-          with traits like material, strength, and durability.
+        <Text
+          className="font-display space-y-6 text-justify text-xl leading-10 tracking-wide"
+          mt="8"
+        >
+          Calling all Squires of the Realms! Are you tired of your Blobert just
+          lounging around the castle moat? It's time to unleash their true
+          potential! Introducing the Blobert Dodgeball Challenge, the ultimate
+          test of fishy finesse and NFT synergy!
         </Text>
 
         {!address && (
@@ -129,11 +136,18 @@ export function Hero() {
         )}
 
         {address && blobertData === BigInt(0) && (
-          <div>
-            <Text>
+          <div className="my-8 space-y-3">
+            <Heading size="3" color="crimson" className="my-4">
+              Don't Miss Out, Blobert! The Dodgeball Action is Heating Up!
+            </Heading>
+            <Text className="text-md my-8 font-semibold">
               Seems you do not own a Blobert NFT!. Checkout Realms page to
               purchase Blobert NFT first
             </Text>
+            <Link target="_blank" href={BLOBERT_SITE_URL} className="pl-4">
+              {" "}
+              Join the Blobert Community
+            </Link>
           </div>
         )}
 
@@ -144,23 +158,27 @@ export function Hero() {
             </Text>
             <Button
               onClick={handleDodgeballMint}
-              disabled={dodgeballData === BigInt(1)}
+              disabled={!!(dodgeballData && dodgeballData != BigInt(0))}
             >
-              {dodgeballData === BigInt(1)
+              {dodgeballData && dodgeballData != BigInt(0)
                 ? "Already Claimed"
                 : "Mint Dodgeball NFT"}
               {isMintDodgePending && <Spinner />}
             </Button>
           </div>
         )}
-        <Button
-          onClick={() => router.push("/dashboard")}
-          className="w-64 cursor-pointer"
-          size="3"
-          mt="9"
-        >
-          Play Game
-        </Button>
+        {!address ? (
+          <ConnectButton />
+        ) : (
+          <Button
+            onClick={() => router.push("/dashboard")}
+            className="w-64 cursor-pointer"
+            size="3"
+            mt="9"
+          >
+            Play Game
+          </Button>
+        )}
       </Flex>
     </div>
   );

@@ -6,6 +6,8 @@ pub trait IDodgeBallNFT<TContractState> {
     fn set_base_uri(ref self: TContractState, base_uri: ByteArray);
     fn set_blobert_address(ref self: TContractState, blobert_address: ContractAddress);
     fn get_blobert_address(self: @TContractState) -> ContractAddress;
+    fn set_dodgecoin_address(ref self: TContractState, dodgecoin_address: ContractAddress);
+    fn get_dodgecoin_address(self: @TContractState) -> ContractAddress;
 }
 
 
@@ -15,6 +17,8 @@ mod DodgeBallNFT {
     use openzeppelin::token::erc721::ERC721Component;
     use starknet::{ContractAddress, get_caller_address};
     use openzeppelin::token::erc721::interface::{IERC721Dispatcher, IERC721DispatcherTrait};
+    use openzeppelin::token::erc20::interface::{IERC20Dispatcher, IERC20DispatcherTrait};
+    use dodgeball::DodgeCoin::{IDodgeCoinDispatcher, IDodgeCoinDispatcherTrait};
 
     component!(path: ERC721Component, storage: erc721, event: ERC721Event);
     component!(path: SRC5Component, storage: src5, event: SRC5Event);
@@ -43,7 +47,8 @@ mod DodgeBallNFT {
         src5: SRC5Component::Storage,
         total_count: u32,
         owner: ContractAddress,
-        blobert_address: ContractAddress
+        blobert_address: ContractAddress,
+        dodgecoin_address: ContractAddress,
     }
 
     #[event]
@@ -58,6 +63,7 @@ mod DodgeBallNFT {
     mod Errors {
         pub const ONLY_OWNER: felt252 = 'Only owner can do operation';
         pub const ONLY_BLOBERT_OWNER: felt252 = 'Only Blobert owner can do op';
+        pub const ZERO_DODGECOIN: felt252 = 'Dodgecoin is zero address';
     }
 
     #[constructor]
@@ -88,13 +94,27 @@ mod DodgeBallNFT {
             self.blobert_address.read()
         }
 
+        fn set_dodgecoin_address(ref self: ContractState, dodgecoin_address: ContractAddress) {
+            assert(get_caller_address() == self.owner.read(), Errors::ONLY_OWNER);
+            self.dodgecoin_address.write(dodgecoin_address);
+        }
+
+        fn get_dodgecoin_address(self: @ContractState) -> ContractAddress {
+            self.dodgecoin_address.read()
+        }
+
         fn mint(ref self: ContractState, recipient: ContractAddress) -> u256 {
             let blobert_token = IERC721Dispatcher { contract_address: self.blobert_address.read() };
             assert(blobert_token.balance_of(recipient) > 0, Errors::ONLY_BLOBERT_OWNER);
 
             // assert(get_caller_address() == self.owner.read(), Errors::ONLY_OWNER);
             let token_id = self.total_count.read() + 1;
+            self.total_count.write(token_id);
             self.erc721._mint(recipient, token_id.into());
+            let dodgecoin = IDodgeCoinDispatcher {
+                contract_address: self.dodgecoin_address.read()
+            };
+            dodgecoin.mint(recipient, 1000);
             token_id.into()
         }
         fn set_base_uri(ref self: ContractState, base_uri: ByteArray) {

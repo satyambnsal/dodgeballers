@@ -2,53 +2,52 @@ import { Text } from "@radix-ui/themes";
 const supported_features = [
   {
     id: 1,
-    question: "What is Stark Voice?",
+    question: "What is DodgeBaller?",
     answer:
-      "Decentralized Voting Platform on Starknet. It supports Time-Bounded voting, Permissioned Voting, Token Weighted Voting",
+      "DodgeBaller is a game built for Blobert NFT holders. It combines your Blobert's unique traits with a classic dodgeball challenge.",
   },
   {
     id: 2,
-    question: "Time-Bounded Voting",
+    question: "Mint a Dodgeball NFT",
     answer:
-      "Our platform introduces time-bound voting, adding an element of urgency and efficiency to the decision-making process. Users will have a designated timeframe to cast their votes, promoting swift and timely resolutions.",
+      "Your Blobert's features like armor, weapon, and material transform into a one-of-a-kind Dodgeball NFT for the game.",
   },
   {
     id: 3,
-    question: "Permissioned Voting",
-    answer:
-      "Our platform implements permissioned voting. Only users with the required credentials (tokens) will be eligible to participate in specific votes, ensuring that only authorized individuals contribute to decision-making",
+    question: "Earn Dodgecoin",
+    answer: "Minting a Dodgeball NFT also rewards you with 1000 Dogecoin!",
   },
   {
     id: 4,
-    question: "Token Weighted Voting",
+    question: "Sharpen Your Aim 🏹",
     answer:
-      " The use of tokens as a voting mechanism adds a layer of fairness and representation. Users holding a certain number of tokens will be granted a corresponding number of votes. This token-per-vote system ensures that individuals with higher stakes have a proportional influence on the outcome.",
+      "Launch cannonballs at a target, aiming for a bullseye. Each bullseye earns you a hefty amount of Dodgecoin.",
   },
   {
     id: 5,
-    question: "User-Friendly Interface",
+    question: "Dodge Financial Ruin",
     answer:
-      "Our user interface is designed to be intuitive and user-friendly, ensuring that even individuals unfamiliar with blockchain technology can easily navigate the platform. This accessibility encourages widespread participation in the decision-making process",
+      "Every throw costs you a small amount of Dodgecoin. Can you hit the target and become a wealthy Blobert?",
   },
 ];
 
 const planned_features = [
   {
     id: 1,
-    question: "User Hooks",
+    question: "Blobert Trait Boosts",
     answer:
-      "Users can opt for email notifications for voting results when voting is over. User can also invite another user via email to vote on proposal.",
+      "Allow certain Blobert traits to translate into in-game advantages. For example, a Blobert with a 'sharp weapon' trait could have a slightly higher chance of critical hits (worth more Dodgecoin).",
   },
   {
     id: 2,
-    question: "Arbitrary Code Execution",
+    question: "Dodgeball Evolution",
     answer:
-      "Users can define a external internal contract to be called once voting ends. For example, sending funds to a dedicated party based on proposal output.",
+      "mplement a system where Dodgeball NFTs can be upgraded through gameplay or by merging them with other Dodgeballs, unlocking new abilities or visual enhancements.",
   },
   {
     id: 3,
-    question: "Support different-different gated models",
-    answer: "User can add whitelist addresses for voting.",
+    question: "Leaderboards",
+    answer: "Track high scores and showcase the top Blobert Dodgeballers",
   },
 ];
 
@@ -57,7 +56,7 @@ export const FAQ = () => {
     <div className="mt-8">
       <div className="mx-auto max-w-7xl divide-y divide-gray-200 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <h2 className="text-3xl font-bold tracking-tight">
-          Supported Features
+          Curious You Are 🐟
         </h2>
         <div className="mb-2 mt-8">
           <dl className="divide-y divide-gray-200">
@@ -81,7 +80,7 @@ export const FAQ = () => {
         </div>
         <div className="mt-4">
           <h2 className="my-8 block text-3xl font-bold tracking-tight">
-            Upcoming Features 🚀
+            Getting Even More Blobtastic! 🚀
           </h2>
           <div className="mb-2 mt-8">
             <dl className="divide-y divide-gray-200">

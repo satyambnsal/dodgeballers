@@ -1,7 +1,15 @@
 <div align="center">
-# DodgeBallers: **thrilling duels to find a hidden ball behind a cup**
+DodgeBaller is a game built for Blobert NFT holders. It combines your Blobert's unique traits with a classic dodgeball challenge. Here's the gist:
 
-Dodgeballers is a blockchain-based game where players, armed with their unique Blobert NFTs, engage in thrilling duels to find a hidden ball behind a cup. Each player receives five chances per round, and the one who wins the most rounds emerges victorious. The game features various modes, challenges, and power-ups to keep players engaged. Traits of the Blobert NFTs, including armor, background, jewelry, mask, and weapon, are gamified to enhance gameplay and strategy. Rewards such as rare items and special NFTs are offered for winning duels, while consequences such as temporary penalties are incurred for losing.
+**Mint a Dodgeball NFT**: Your Blobert's features like armor, weapon, and material transform into a one-of-a-kind Dodgeball NFT for the game.
+
+**Earn Dodgecoin**: Minting a Dodgeball NFT also rewards you with some sweet Dogecoin!
+
+**Sharpen Your Aim**: Launch cannonballs at a target, aiming for a bullseye. Each bullseye earns you a hefty amount of Dodgecoin.
+
+**Dodge Financial Ruin**: Every throw costs you a small amount of Dodgecoin. Can you hit the target and become a wealthy Blobert?
+
+It's a fun way to test your skills, win cryptocurrency, and celebrate the unique qualities of your Blobert NFT.
 
 
 
@@ -91,6 +99,9 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 
 ### Sepolia Contract Addresses 
+Account:
+Address1: 0x041b27f006d01a9d2c468e33a05f1951b6a7cd0ac562b928a8e0728d4e5627dc
+
 
 Blobert code
 BlobCloneNFT: 0x0522d9ca1006be983f9106b8a78be9f25f1f493798715d668aec5113ec1b700c
@@ -105,17 +116,41 @@ Dodgeball contract address:
 0x673a3af516fceb278a6d472a435cdb3195ae5a037ca3c717598a3b57359b7b5
 
 
+V2
+===========================
+Blobert
+0x770006531ee20284e2d0eee309f7aad3d9a3a538d125da1aeb0df3956ebda65
+DodgeballNFT
+0x79924d57be944e41d642f01934bc5ccd3e53238e95cb7ec9fe2e4e03f82db66
+Dodgecoin
+0x47a9a96c7816c0c093ae1214a6ded2bb7bfcd117d991caf0b9744fb567bba0
+DodgeCoach
+0x462c71405d9a7e2da85f1d7d649ffe6d006328d9d2a70b644204f829b551cec
+
 
 ### Katana local
 
-account address: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
-
+account address: 
+Address1: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
+Address2: 0xe29882a1fcba1e7e10cad46212257fea5c752a4f9b1b1ec683c503a2cf5c8a
 
 Blobert clone NFT address: 0x34f71e5b6537cf2292d7ccdd49a252fc65e5578ff4d6839916393954145cfbf
 
 Dodgeball contract address
 0x505d9f79ea6c2c00e07f3e9dbf7f10c92668f46b95c22d88a39f9a271aad6f1
 
+
+
+v2
+======
+BlobertClone
+0x34f71e5b6537cf2292d7ccdd49a252fc65e5578ff4d6839916393954145cfbf
+Dodgeball
+0x773c0c65306c4f6610397cd2b13634b097f52f5418d4eaedce1cd0b43f6aaaa
+Dodgecoin
+0x184f81aeab049bcb7113ae1a33c8e141a718bf7150e97a19f95e7a7bdc37bb2
+DodgeCoach
+0x326eb7d666719b3f2ace53c507f2d7cc567aeb9f0703aa38ccf28bcb8ae9c1a
 
 ### Mainnet Contract Addresses
 

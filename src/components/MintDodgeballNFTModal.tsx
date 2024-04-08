@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Button, Dialog, Flex } from "@radix-ui/themes";
 
 export const MintDodgeBallNFTModal = ({
@@ -10,10 +11,11 @@ export const MintDodgeBallNFTModal = ({
   return (
     <Dialog.Root open={open}>
       <Dialog.Content style={{ maxWidth: 450 }}>
-        <Dialog.Title>Pay Entry Fees</Dialog.Title>
+        <Dialog.Title>Hold Your Blobby Horses! 🐴</Dialog.Title>
         <Dialog.Description size="2" mb="4">
-          Dear Blobert, You need to own a Dodgeball NFT to play this game. You
-          can mint a NFT from Home page.
+          Looks like you're bare-handed! You can't exactly dodgeball with just
+          fins, can you, Blobert? Head back to the homepage and mint a Dodgeball
+          NFT to unleash your inner champion!
         </Dialog.Description>
         <Flex gap="3" mt="4" justify="end">
           <Dialog.Close>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Button, Dialog, Flex } from "@radix-ui/themes";
 
 export const GameTutorial = ({
@@ -12,11 +13,12 @@ export const GameTutorial = ({
       <Dialog.Content style={{ maxWidth: 450 }}>
         <Dialog.Title>Pay Entry Fees</Dialog.Title>
         <Dialog.Description size="2" mb="4">
-          Dear Blobert, Welcome to Dodgeball game!
+          Ready, Aim, Dodgecoin! 🚀
         </Dialog.Description>
         <Dialog.Description size="2" mb="4">
-          Every through costs 5 Dodgecoin. You get 1000 Dodgecoin upon mint
-          time. If you hit the mark, you get 10 dodgecoin!
+          Each throw costs 5 Doge, Blobert! But land a bullseye and you'll reel
+          in a whopping 100 Dogecoins! So sharpen your aim and get ready to swim
+          in riches (or at least slightly wealthier waters).
         </Dialog.Description>
         <Flex gap="3" mt="4" justify="end">
           <Dialog.Close>
