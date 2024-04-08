@@ -93,6 +93,9 @@ export function Hero() {
     } catch (error) {}
   };
 
+  console.log("dodgeball", Number(dodgeballData));
+  console.log("blobert", Number(blobertData));
+
   return (
     <div className="relative pb-20 pt-10 sm:py-24">
       {/* <div className="bg-indigo-50 absolute inset-x-0 -bottom-14 -top-48 overflow-hidden">
@@ -135,32 +138,34 @@ export function Hero() {
           </Text>
         )}
 
-        {address && blobertData === BigInt(0) && (
-          <div className="my-8 space-y-3">
-            <Heading size="3" color="crimson" className="my-4">
-              Don't Miss Out, Blobert! The Dodgeball Action is Heating Up!
-            </Heading>
-            <Text className="text-md my-8 font-semibold">
-              Seems you do not own a Blobert NFT!. Checkout Realms page to
-              purchase Blobert NFT first
-            </Text>
-            <Link target="_blank" href={BLOBERT_SITE_URL} className="pl-4">
-              {" "}
-              Join the Blobert Community
-            </Link>
-          </div>
-        )}
+        {address &&
+          Number(blobertData) === 0 &&
+          Number(dodgeballData) === 0 && (
+            <div className="my-8 space-y-3">
+              <Heading size="3" color="crimson" className="my-4">
+                Don't Miss Out, Blobert! The Dodgeball Action is Heating Up!
+              </Heading>
+              <Text className="text-md my-8 font-semibold">
+                Seems you do not own a Blobert NFT!. Checkout Realms page to
+                purchase Blobert NFT first
+              </Text>
+              <Link target="_blank" href={BLOBERT_SITE_URL} className="pl-4">
+                {" "}
+                Join the Blobert Community
+              </Link>
+            </div>
+          )}
 
-        {address && blobertData === BigInt(1) && (
+        {address && (Number(blobertData) > 0 || Number(dodgeballData) > 0) && (
           <div className="mt-8 flex flex-col space-y-4 border">
             <Text>
               Congratulations! you are eligible for Dodgeball NFT mint 🔥
             </Text>
             <Button
               onClick={handleDodgeballMint}
-              disabled={!!(dodgeballData && dodgeballData != BigInt(0))}
+              disabled={!!(dodgeballData && Number(dodgeballData) > 0)}
             >
-              {dodgeballData && dodgeballData != BigInt(0)
+              {!!(dodgeballData && Number(dodgeballData) > 0)
                 ? "Already Claimed"
                 : "Mint Dodgeball NFT"}
               {isMintDodgePending && <Spinner />}
