@@ -184,6 +184,14 @@ export function Hero() {
             Play Game
           </Button>
         )}
+        <Button
+          onClick={() => router.push("/dashboard?demo=true")}
+          className="w-100 flex cursor-pointer"
+          size="4"
+          mt="9"
+        >
+          Play Game(demo Mode)
+        </Button>
       </Flex>
     </div>
   );
