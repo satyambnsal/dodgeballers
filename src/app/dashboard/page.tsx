@@ -14,7 +14,16 @@ import { useSearchParams } from "next/navigation";
 const PhaserLayerntWithNoSSR = dynamic(() => import("@/phaser/PhaserGame"), {
   ssr: false,
 });
-export default function Dashboard() {
+
+export default function DashboardPage() {
+  return (
+    <Suspense>
+      <Dashboard />
+    </Suspense>
+  );
+}
+
+function Dashboard() {
   const { chain } = useNetwork();
   const { address } = useAccount();
   const params = useSearchParams();
